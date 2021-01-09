@@ -1,2 +1,2 @@
-# ad-manager-python
-ad manager OOP application using python
+#### OOP-Python
+object oriented programming in python.
