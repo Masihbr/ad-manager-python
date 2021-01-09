@@ -16,6 +16,7 @@ class Advertiser(BaseAdvertising):
     def set_name(self, name):
         self.__name = name
 
+    @staticmethod
     def help(self):
         return "Advertiser{" + '\n'
         + "     " + "String name: contains name of the Advertiser" + '\n'
