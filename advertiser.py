@@ -18,12 +18,12 @@ class Advertiser(BaseAdvertising):
 
     @staticmethod
     def help():
-        return "Advertiser{" + '\n'
-        + "     " + "String name: contains name of the Advertiser" + '\n'
-        + "     " + "int id: a unique number to identify Advertiser" + '\n'
-        + "     " + "int clicks: contains number of clicks that Advertiser has received" + '\n'
-        + "     " + "int views: contains number of clicks that Advertiser has received" + '\n'
-        + '}'
+        return """Advertiser{
+             String name: contains name of the Advertiser
+             int id: a unique number to identify Advertiser
+             int clicks: contains number of clicks that Advertiser has received
+             int views: contains number of clicks that Advertiser has received
+} """
 
     @staticmethod
     def get_total_clicks():
