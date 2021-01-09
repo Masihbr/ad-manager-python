@@ -1,16 +1,27 @@
-# This is a sample Python script.
+from baseAdvertising import BaseAdvertising
+from ad import Ad
+from advertiser import Advertiser
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+baseAdvertising = BaseAdvertising()
+advertiser1 = Advertiser(1, "name1")
+advertiser2 = Advertiser(2, "name2")
+ad1 = Ad(1, "title1", "img-url1", "link1", advertiser1)
+ad2 = Ad(2, "title2", "img-url2", "link2", advertiser2)
+print(baseAdvertising.describe_me())
+print(ad2.describe_me())
+print(advertiser1.describe_me())
+ad1.inc_views()
+ad1.inc_views()
+ad1.inc_views()
+ad1.inc_views()
+ad2.inc_views()
+ad1.inc_clicks()
+ad1.inc_clicks()
+ad2.inc_clicks()
+print(advertiser2.get_name())
+advertiser2.set_name("new name")
+print(advertiser2.get_name())
+print(ad1.get_clicks())
+print(advertiser2.get_clicks())
+print(Advertiser.get_total_clicks())
+print(Advertiser.help())
