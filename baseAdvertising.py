@@ -19,4 +19,3 @@ class BaseAdvertising:
 
     def describeMe(self):
         return "parent class for Ad and Advertiser class"
-    
