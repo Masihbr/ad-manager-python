@@ -1,9 +1,9 @@
 class BaseAdvertising:
 
     def __init__(self):
-        _id = 0
-        _clicks = 0
-        _views = 0
+        self._id = 0
+        self._clicks = 0
+        self._views = 0
 
     def get_clicks(self):
         return self._clicks
