@@ -17,7 +17,7 @@ class Advertiser(BaseAdvertising):
         self.__name = name
 
     @staticmethod
-    def help(self):
+    def help():
         return "Advertiser{" + '\n'
         + "     " + "String name: contains name of the Advertiser" + '\n'
         + "     " + "int id: a unique number to identify Advertiser" + '\n'
@@ -25,7 +25,8 @@ class Advertiser(BaseAdvertising):
         + "     " + "int views: contains number of clicks that Advertiser has received" + '\n'
         + '}'
 
-    def get_total_clicks(self):
+    @staticmethod
+    def get_total_clicks():
         n = len(Advertiser.__allAdvertisers)
         sum = 0
         for i in range(0, n):
