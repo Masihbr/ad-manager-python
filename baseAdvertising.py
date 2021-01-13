@@ -5,12 +5,6 @@ class BaseAdvertising:
         self._clicks = 0
         self._views = 0
 
-    def inc_clicks(self):
-        self._clicks += 1
-
-    def inc_views(self):
-        self._views += 1
-
     @property
     def clicks(self):
         return self._clicks
@@ -26,6 +20,12 @@ class BaseAdvertising:
     @views.setter
     def views(self, views):
         self._views = views
+
+    def inc_clicks(self):
+        self._clicks += 1
+
+    def inc_views(self):
+        self._views += 1
 
     def describe_me(self):
         return "parent class for Ad and Advertiser class"

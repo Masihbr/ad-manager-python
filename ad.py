@@ -11,6 +11,14 @@ class Ad(BaseAdvertising):
         self._link = link
         self._advertiser = advertiser
 
+    def inc_clicks(self):
+        self._clicks += 1
+        self._advertiser.inc_clicks()
+
+    def inc_views(self):
+        self._views += 1
+        self._advertiser.inc_views()
+
     @property
     def title(self):
         return self._title
@@ -23,6 +31,10 @@ class Ad(BaseAdvertising):
     def img_url(self):
         return self._img_url
 
+    @img_url.setter
+    def img_url(self, img_url):
+        self._img_url = img_url
+
     @property
     def link(self):
         return self._link
@@ -31,17 +43,13 @@ class Ad(BaseAdvertising):
     def link(self, link):
         self._link = link
 
-    def __setattr__(self, key, value):
-        if key == 'advertiser':
-            self._advertiser = value
+    @property
+    def advertiser(self):
+        return None
+
+    @advertiser.setter
+    def advertiser(self, advertiser):
+        self._advertiser = advertiser
 
     def describe_me(self):
         return "Ad class: contains Ads' info and their stats"
-
-    def inc_clicks(self):
-        self._clicks += 1
-        self._advertiser.inc_clicks()
-
-    def inc_views(self):
-        self._views += 1
-        self._advertiser.inc_views()
