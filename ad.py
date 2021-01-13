@@ -11,14 +11,6 @@ class Ad(BaseAdvertising):
         self._link = link
         self._advertiser = advertiser
 
-    def inc_clicks(self):
-        self._clicks += 1
-        self._advertiser.inc_clicks()
-
-    def inc_views(self):
-        self._views += 1
-        self._advertiser.inc_views()
-
     @property
     def title(self):
         return self._title
@@ -50,6 +42,14 @@ class Ad(BaseAdvertising):
     @advertiser.setter
     def advertiser(self, advertiser):
         self._advertiser = advertiser
+
+    def inc_clicks(self):
+        self._clicks += 1
+        self._advertiser.inc_clicks()
+
+    def inc_views(self):
+        self._views += 1
+        self._advertiser.inc_views()
 
     def describe_me(self):
         return "Ad class: contains Ads' info and their stats"

@@ -25,7 +25,7 @@ class Advertiser(BaseAdvertising):
              int id: a unique number to identify Advertiser
              int clicks: contains number of clicks that Advertiser has received
              int views: contains number of clicks that Advertiser has received
-} """
+        } """
 
     @staticmethod
     def get_total_clicks():
