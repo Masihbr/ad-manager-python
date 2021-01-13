@@ -34,7 +34,7 @@ class Ad(BaseAdvertising):
     def __setattr__(self, key, value):
         if key == 'advertiser':
             self._advertiser = value
-        
+
     def describe_me(self):
         return "Ad class: contains Ads' info and their stats"
 
