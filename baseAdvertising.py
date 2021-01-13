@@ -24,8 +24,8 @@ class BaseAdvertising:
         return self._views
 
     @views.setter
-    def views(self):
-        return self._views
-    
+    def views(self, views):
+        self._views = views
+
     def describe_me(self):
         return "parent class for Ad and Advertiser class"
