@@ -31,9 +31,10 @@ class Ad(BaseAdvertising):
     def link(self, link):
         self._link = link
 
-    def set_advertiser(self, advertiser):
-        self._advertiser = advertiser
-
+    def __setattr__(self, key, value):
+        if key == 'advertiser':
+            self._advertiser = value
+        
     def describe_me(self):
         return "Ad class: contains Ads' info and their stats"
 
