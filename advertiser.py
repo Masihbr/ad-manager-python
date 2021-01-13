@@ -10,10 +10,12 @@ class Advertiser(BaseAdvertising):
         self._name = name
         Advertiser._allAdvertisers.append(self)
 
-    def get_name(self):
+    @property
+    def name(self):
         return self._name
 
-    def set_name(self, name):
+    @name.setter
+    def name(self, name):
         self._name = name
 
     @staticmethod
