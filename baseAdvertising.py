@@ -5,10 +5,12 @@ class BaseAdvertising:
         self._clicks = 0
         self._views = 0
 
-    def get_clicks(self):
+    @property
+    def clicks(self):
         return self._clicks
 
-    def get_views(self):
+    @property
+    def views(self):
         return self._views
 
     def inc_clicks(self):
