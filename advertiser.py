@@ -27,11 +27,10 @@ class Advertiser(BaseAdvertising):
 
     @staticmethod
     def get_total_clicks():
-        n = len(Advertiser.__allAdvertisers)
-        sum = 0
-        for i in range(0, n):
-            sum += Advertiser.__allAdvertisers[i].get_clicks()
-        return sum
+        total_clicks = 0
+        for advertiser in Advertiser.__allAdvertisers:
+            total_clicks += advertiser.get_clicks()
+        return total_clicks
 
     def describe_me(self):
         return "Advertiser class: contains advertisers' info and their stats"
