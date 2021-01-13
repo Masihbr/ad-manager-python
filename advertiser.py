@@ -31,7 +31,7 @@ class Advertiser(BaseAdvertising):
     def get_total_clicks():
         total_clicks = 0
         for advertiser in Advertiser._allAdvertisers:
-            total_clicks += advertiser.get_clicks()
+            total_clicks += advertiser.clicks
         return total_clicks
 
     def describe_me(self):
