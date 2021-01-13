@@ -11,19 +11,24 @@ class Ad(BaseAdvertising):
         self._link = link
         self._advertiser = advertiser
 
-    def get_title(self):
+    @property
+    def title(self):
         return self._title
 
-    def set_title(self, title):
+    @title.setter
+    def title(self, title):
         self._title = title
 
-    def get_img_url(self):
+    @property
+    def img_url(self):
         return self._img_url
 
-    def get_link(self):
+    @property
+    def link(self):
         return self._link
 
-    def set_link(self, link):
+    @link.setter
+    def link(self, link):
         self._link = link
 
     def set_advertiser(self, advertiser):
