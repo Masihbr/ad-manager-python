@@ -15,9 +15,17 @@ class BaseAdvertising:
     def clicks(self):
         return self._clicks
 
+    @clicks.setter
+    def clicks(self, clicks):
+        self._clicks = clicks
+
     @property
     def views(self):
         return self._views
 
+    @views.setter
+    def views(self):
+        return self._views
+    
     def describe_me(self):
         return "parent class for Ad and Advertiser class"
